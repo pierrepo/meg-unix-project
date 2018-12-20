@@ -41,7 +41,7 @@ Vous aurez également à votre disposition :
 - Un script (`workflow.sh`) qui contient *uniquement* le processus d'analyse pour l'échantillon GUP-1 (PGF) cartographié sur les génomes de référence de PGF et COX.
 
 
-# Analyses des données de séquençage
+## Analyses des données de séquençage
 
 Le processus d'analyse des données est constituée des étapes :
 
