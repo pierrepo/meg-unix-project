@@ -94,7 +94,7 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
         ```
         $ tar zxvf project_data.tgz
         ```
-        Vérifiez que vous avez bie 3 répertoires : `chr6p_samples`, `chr6p_genomes` et `chr6p_annotations`.
+        Vérifiez que vous avez bien 3 répertoires : `chr6p_samples`, `chr6p_genomes` et `chr6p_annotations`.
 
     - Rendez exécutable le script que vous avez téléchargé avec la commande :
         ```
