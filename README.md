@@ -1,9 +1,12 @@
 ---
-title: M1 MEG option Bioinformatique Génomique - Projet Unix
+title: Projet Unix
 author: Pierre Poulain
+license: Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0
 ---
 
-# Objectifs et contexte
+MEG M1 option Bioinformatique Génomique
+
+# Objectifs et contexte
 
 L'objectif de ce projet est de vous donner une première expérience sur la manipulation et l'analyse de données obtenues par des techniques de séquençage haut débit (RNA-Seq ici).
 
