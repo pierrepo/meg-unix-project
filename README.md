@@ -12,14 +12,16 @@ L'objectif de ce projet est de vous donner une première expérience sur la mani
 
 Vous allez vous intéresser au Complexe Majeur d'Histocompatibilité (CMH), localisé sur le bras court du chromosome 6. Le CMH est une des régions du génome humain la plus polymorphe.
 
-Plus précisément, vous allez étudier l'impact de la séquence de référence du génome dans la cartographie des données issues de séquençage. Pour cela, vous comparerez deux jeux de séquences (*reads*) obtenues par séquençage haut débit de deux lignées cellulaires humaines (PGF et COX). La séquence individuelle de chaque lignée est connue. Après une étape de nettoyage, vous cartographierez les reads sur la séquence du génome de référence pour le CMH (haplotype PGF) et sur la séquence du génome de COX. Enfin, vous analyserez et visualiserez vos résultats.
+Plus précisément, vous allez étudier l'impact de la séquence de référence du génome dans la cartographie des données issues de séquençage. Pour cela, vous comparerez deux jeux de séquences (*reads*) obtenues par séquençage haut débit de deux lignées cellulaires humaines (PGF et COX). La séquence individuelle de chaque lignée est connue.
 
-Vous aurez à votre disposition quelques articles scientifiques sur le CMH.
+Après une étape de nettoyage, vous cartographierez les *reads* sur la séquence du génome de référence pour le CMH (haplotype PGF) et sur la séquence du génome de COX. Enfin, vous analyserez et visualiserez vos résultats.
+
+Vous aurez à votre disposition des articles scientifiques sur le CMH.
 
 
 ## Données
 
-Pour réaliser ce projet, vous aurez à votre disposition l'archive (`project_data.tgz`) qui contient :
+Pour réaliser ce projet, vous utiliserez l'archive (`project_data.tgz`) qui contient :
 
 - Dans le répertoire `chr6p_samples`, deux jeux de séquences, obtenues par RNA-Seq, au format fastq compressé (.fastq.gz). Le jeu de données GUP-1 correspond à l'haplotype PGF. Le jeu de données GUP-3 correspond à l'haplotype COX. Pour chaque échantillon, vous aurez à votre disposition deux fichiers car les données sont pairées (les *reads* R1 dans un sens et les *reads* R2 dans l'autre sens).
 - Dans le répertoire `chr6p_genomes`, les séquences complètes, au format fasta, des deux génomes de références : PGF (référence pour le CMH) et COX.
@@ -43,11 +45,11 @@ Vous aurez également à votre disposition :
 
 Le processus d'analyse des données est constituée des étapes :
 
-1. Nettoyage des reads : suppression des adaptateurs et des reads de mauvaise qualité. Outil : `trimmomatic` (java).
+1. Nettoyage des *reads* : suppression des adaptateurs et des *reads* de mauvaise qualité. Outil : `trimmomatic` (java).
 
-2. Indexation des génomes qui vont être utilisés pour la cartographie. Sans indexation, la cartographie des reads sur le génome serait extrêmement lente. Outil : `hisat2` (Perl et Python).
+2. Indexation des génomes qui vont être utilisés pour la cartographie. Sans indexation, la cartographie des *reads* sur le génome serait extrêmement lente. Outil : `hisat2` (Perl et Python).
 
-3. Cartographie des reads sur le génome puis indexation des reads cartographiés. Outils : `hisat2` (Perl et Python) puis `samtools` (C).
+3. Cartographie des *reads* sur le génome puis indexation des *reads* cartographiés. Outils : `hisat2` (Perl et Python) puis `samtools` (C).
 
 4. Analyse de la cartographie. Outil : `samtools` (C).
 
@@ -69,7 +71,7 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
         $ export https_proxy=http://www-cache.script.univ-paris-diderot.fr:3128/
         ```
 
-    - Activez conda puis activer l'environnement `unix-project` pour que les logiciels dont vous avez besoin soient disponibles :
+    - Activez conda puis activer l'environnement `unix-project` qui contient les logiciels dont vous aurez besoin :
         ```
         $ source /opt/bioinfo/soft/miniconda3/etc/profile.d/conda.sh
         $ conda activate unix-project
@@ -103,7 +105,7 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
         $ ./workflow.sh
         ```
 
-    - L'exécution du script va prendre entre 5 à 15 min, suivant le nombre d'utilisateurs connectés en même temps sur la machine *serv-bioinfo*.
+    - L'exécution du script va prendre entre 5 à 15 min, suivant la charge de la machine *serv-bioinfo*.
 
     Le fichier `workflow-XXX-YYY.log` (avec `XXX` la date et `YYY` l'heure à laquelle le script a été lancé) contient les temps d'exécution des différentes étapes ainsi que les résultats de quelques analyses. Si le processus d'analyse s'est exécuté correctement, le message `Well done!` doit apparaître à la fin du fichier.
 
@@ -275,7 +277,7 @@ Au cas où vous n'arriveriez pas à créer le script `workflow2.sh` et donc fair
 
 # Gestion de l'espace disque
 
-Les données que vous allez manipuler et générer pour ce projet ont une taille importante. Vous disposez d'un quota (espace maximum autorisé) de 1 Go sur les machines FreeBSD du Script et de 4 Go sur la machine *serv-bioinfo*. Faites très attention quand vous copiez des données depuis *serv-bioinfo* vers les machines FreeBSD car vous pouvez atteindre votre quota très facilement et bloquer votre compte.
+Les données que vous allez manipuler et générer pour ce projet ont une taille importante. Vous disposez d'un quota (espace maximum autorisé) de 1 Go sur les machines du Script et de 4 Go sur la machine *serv-bioinfo*. Faites très attention quand vous copiez des données depuis *serv-bioinfo* vers les machines du Script car vous pouvez atteindre votre quota très facilement et bloquer votre compte.
 
 Pour vous aider dans cette gestion, la commande `du -ch` vous sera utile. Par exemple,
 
