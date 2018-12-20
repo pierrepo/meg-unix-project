@@ -94,8 +94,9 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
         ```
         $ tar zxvf project_data.tgz
         ```
+        Vérifiez que vous avez bie 3 répertoires : `chr6p_samples`, `chr6p_genomes` et `chr6p_annotations`.
 
-    - Vérifiez que votre script est bien exécutable avec la commande :
+    - Rendez exécutable le script que vous avez téléchargé avec la commande :
         ```
         $ chmod +x workflow.sh
         ```
@@ -136,7 +137,7 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
 
 2. Lancement de votre script `workflow2.sh` sur la machine *serv-bioinfo*.
 
-    - Vérifiez bien que le script `workflow2.sh` est bien exécutable.
+    - Vérifiez bien que le script `workflow2.sh` est bien exécutable, que vous êtes dans le répertoire `project` et que vous avez activé conda et l'environnement `unix-project`.
 
     - Lancez-le... et croisez les doigts :
 
@@ -164,7 +165,7 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
         $ zgrep -c '^+$' *P.fastq.gz
         ```
 
-    - Expliquez en **détail** le fonctionnement des commandes Unix précédentes. Déterminez pour chaque échantillon, le pourcentage de *reads* conservés par le nettoyage. Quel a été l'effet du nettoyage sur le nombre de *reads* ?
+    - Expliquez le fonctionnement des commandes Unix précédentes. Déterminez pour chaque échantillon, le pourcentage de *reads* conservés par le nettoyage. Quel a été l'effet du nettoyage sur le nombre de *reads* ?
 
     - Calculez la taille moyenne des *reads* pour les 4 fichiers `.fastq.gz` fournis (2 pour GUP-1 et 2 pour GUP-3), avec la commande suivante (à lancer depuis le répertoire `chr6p_samples`) :
 
@@ -239,7 +240,9 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
 
 # Documents demandés et critères d'évaluation
 
-Tous les documents demandés seront organisés dans un répertoire dont le nom aura la forme `projet_unix_NOM_PRENOM` avec, bien sur, `NOM` et `PRENOM` à adapter. Ce répertoire sera ensuite archivé et compressé dans un fichier au format `.tgz` sous le nom `projet_unix_NOM_PRENOM.tgz`. Cette archive sera déposée sur le site du cours sur Moodle avant le **26 janvier 2019 20h00**.
+Tous les documents demandés seront organisés dans un répertoire dont le nom aura la forme `projet_unix_NOM_PRENOM` avec, bien sur, `NOM` et `PRENOM` à adapter. Ce répertoire sera ensuite archivé et compressé dans un fichier au format `.tgz` sous le nom `projet_unix_NOM_PRENOM.tgz`. Cette archive sera déposée sur le site du cours sur Moodle avant le :
+
+**26 janvier 2019 20h00**
 
 Contenu du répertoire `projet_unix_NOM_PRENOM` :
 
@@ -266,11 +269,9 @@ Contenu du répertoire `projet_unix_NOM_PRENOM` :
 Par ailleurs, vous devez impérativement respecter les noms et les formats de fichiers demandés. Soyez en particulier très attentifs à la casse.
 
 
-# Coup de pouce
+# Coup de pouce
 
-Le fichier `project_results_help.tgz` vous sera communiqué ultérieurement. Ce fichier contient les données d'une analyse complète réalisée sur ma machine. Vous aurez également à votre disposition le fichier de sortie `workflow2-XXX-YYY.log` correspondant. Pour ces deux fichiers, vous aurez les empreintes MD5 correspondantes.
-
-Vous pouvez utiliser ces données pour vérifiez que vous obtenez des valeurs cohérentes, mais pas nécessairement identiques.
+Si vous en avez le besoin, le fichier `project_results_help.tgz` vous sera communiqué ultérieurement. Ce fichier contient les données d'une analyse complète réalisée sur ma machine. Vous aurez également à votre disposition le fichier de sortie `workflow2-XXX-YYY.log` correspondant. Pour ces deux fichiers, vous aurez les empreintes MD5 correspondantes.
 
 Au cas où vous n'arriveriez pas à créer le script `workflow2.sh` et donc faire l'analyse complète vous-même, vous pourrez utiliser ces données pour réaliser les analyses demandées dans les questions 3, 4 et 6. Si tel est le cas, **indiquez le clairement** dans votre rapport.
 
@@ -303,7 +304,7 @@ Si vous souhaitez réaliser l'étape de visualisation avec IGV sur votre machine
 $ scp -r login@adresse-serv-bioinfo:~/project/chr6p_{index,map,annotations}  ./
 ```
 
-# Mise en garde
+# Mise en garde
 
 En bioinformatique, il est facile et parfois très tentant de prendre tel quel le script d'un copain pour le sien. Néanmoins, il est aussi très facile de mesurer la similitude entre deux fichiers.
 
