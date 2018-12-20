@@ -59,7 +59,7 @@ Le processus d'analyse des données est constituée des étapes :
 Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur `serv-bioinfo`. L'outil de visualisation `IGV` n'est pas installé sur le serveur mais il sera à installer sur votre machine d'analyse (au Script ou à la maison). IGV est téléchargeable sur le site du [Broad Institute](https://software.broadinstitute.org/software/igv/download).
 
 
-# Travail demandé
+# Travail demandé
 
 0. Test du fonctionnement du script `workflow.sh` sur le jeu de données du projet.
 
@@ -237,7 +237,7 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
 
 
 
-# Documents demandés et critères d'évaluation
+# Documents demandés et critères d'évaluation
 
 Tous les documents demandés seront organisés dans un répertoire dont le nom aura la forme `projet_unix_NOM_PRENOM` avec, bien sur, `NOM` et `PRENOM` à adapter. Ce répertoire sera ensuite archivé et compressé dans un fichier au format `.tgz` sous le nom `projet_unix_NOM_PRENOM.tgz`. Cette archive sera déposée sur le site du cours sur Moodle avant le **26 janvier 2019 20h00**.
 
