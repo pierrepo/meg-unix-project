@@ -81,13 +81,13 @@ Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur
     - Avec la commande `wget`, téléchargez les fichiers `project_data.tgz` et `workflow.sh` depuis les adresses suivantes :
         ```
         http://cupnet.net/docs/MEG_projet/project_data.tgz
-        http://cupnet.net/docs/MEG_projet/workflow.sh
+        https://raw.githubusercontent.com/pierrepo/meg-unix-project/master/workflow.sh
         ```
 
     - Vérifiez les empreintes md5 des fichiers que vous avez téléchargés. Elles doivent être :
         ```
         9d7c5ff96e72848eb09d18cb9abbb4fd  project_data.tgz
-        92e8986f12593da42fa1c5724d7f8cc3  workflow.sh
+        977663a5d8759927000088ad295179a5  workflow.sh
         ```
 
     - Décompressez l'archive `data_project.tgz` avec la commande :
