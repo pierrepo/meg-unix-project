@@ -56,7 +56,7 @@ Le processus d'analyse des données est constituée des étapes :
 5. Visualisation des données. Outil : `IGV` (java).
 
 
-Les outils `trimmomatic`, `hista2` et `samtools` sont disponibles sur le serveur `serv-bioinfo`. L'outil de visualisation `IGV` n'est pas installé sur le serveur mais il sera à installer sur votre machine d'analyse (au Script ou à la maison). IGV est téléchargeable sur le site du [Broad Institute](https://software.broadinstitute.org/software/igv/download).
+Les outils `trimmomatic`, `hisat2` et `samtools` sont disponibles sur le serveur `serv-bioinfo`. L'outil de visualisation `IGV` n'est pas installé sur le serveur mais il sera à installer sur votre machine d'analyse (au Script ou à la maison). IGV est téléchargeable sur le site du [Broad Institute](https://software.broadinstitute.org/software/igv/download).
 
 
 # Travail demandé
